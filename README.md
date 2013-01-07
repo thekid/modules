@@ -55,4 +55,5 @@ Already up-to-date.
 
 ```sh
 $ ./module remove xp-forge/google-search
+===> Module xp-forge/google-search removed
 ```

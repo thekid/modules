@@ -22,4 +22,4 @@ ls "$vendor/*" 2>/dev/null || rmdir "$vendor"
 # Rebuild paths
 $(rebuild_paths)
 
-echo "===> $vendor/$repo removed"
+echo "===> Module $vendor/$repo removed"
