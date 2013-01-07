@@ -22,7 +22,7 @@ Usage
 **Adding** a module is done by using the "add" command and supplying vendor and repository. We use "xp-forge" and "gsa-xmlfeed" in the following example:
 
 ```sh
-$ ./module add  xp-forge/gsa-xmlfeed
+$ ./modules add xp-forge/gsa-xmlfeed
 ===> Checkout xp-forge/gsa-xmlfeed
 Cloning into gsa-xmlfeed...
 remote: Counting objects: 185, done.
@@ -38,12 +38,12 @@ The module is now added to the XP Framework's class path, as can be seen by typi
 
 ```sh
 # A single module 
-$ ./module update xp-forge/gsa-xmlfeed
+$ ./modules update xp-forge/gsa-xmlfeed
 ===> Updating xp-forge/gsa-xmlfeed
 Already up-to-date.
 
 # All modules
-$ ./module update
+$ ./modules update
 ===> Updating xp-forge/google-search
 Already up-to-date.
 ===> Updating xp-forge/gsa-xmlfeed
@@ -54,6 +54,6 @@ Already up-to-date.
 **Removing** a module is done by using the "remove" command
 
 ```sh
-$ ./module remove xp-forge/google-search
+$ ./modules remove xp-forge/google-search
 ===> Module xp-forge/google-search removed
 ```

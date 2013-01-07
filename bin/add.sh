@@ -1,9 +1,8 @@
 #!/bin/sh
+#-modules add <vendor>/<repo>: Adds a module
 
-if [ "$1" = "" ] ; then
-  echo "Usage: add [vendor]/[module]"
-  exit 1
-fi
+arg=${1%*/}
+shift 1 || exit 2
 
 vendor=${1%/*}
 repo=${1#*/}

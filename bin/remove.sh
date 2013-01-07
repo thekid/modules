@@ -1,11 +1,9 @@
 #!/bin/sh
-
-if [ "$1" = "" ] ; then
-  echo "Usage: remove [vendor]/[module]"
-  exit 1
-fi
+#-modules remove <vendor>/<repo>: Removes a module
 
 arg=${1%*/}
+shift 1 || exit 2
+
 vendor=${arg%/*}
 repo=${arg#*/}
 

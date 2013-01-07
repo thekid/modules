@@ -3,8 +3,11 @@
 CMDS=./bin
 cmd=$1
 if [ "" = "$cmd" ] ; then
+  echo "Usage: modules [sub-command] <args>"
+  echo
+  echo "Subcommand is one of:"
   for cmd in `ls $CMDS/*sh` ; do 
-    echo "module" $(basename $cmd .sh)
+    echo "* " $(grep '^#-modules' $cmd | sed -e 's/^#-//g' )
   done
   exit 0
 fi

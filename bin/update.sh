@@ -1,4 +1,5 @@
 #!/bin/sh
+#-modules update [<vendor>/<module>]: Updates a single module, or all modules
 
 update_module() {
   vendor=$1
