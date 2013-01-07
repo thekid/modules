@@ -16,10 +16,10 @@ fi
 
 rm -rf "$vendor/$repo" ".$vendor.$repo.pth.part"
 
-ls "$vendor/*" 2>/dev/null
-if [ $? != 0 ] ; then
-  rmdir "$vendor"
-fi
+# Remove vendor directory
+ls "$vendor/*" 2>/dev/null || rmdir "$vendor" 
 
 # Rebuild paths
 $(rebuild_paths)
+
+echo "===> $vendor/$repo removed"
