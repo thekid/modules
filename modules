@@ -2,6 +2,8 @@
 
 CMDS=./bin
 cmd=$1
+
+# Usage
 if [ "" = "$cmd" ] ; then
   echo "Usage: modules [sub-command] <args>"
   echo
@@ -11,7 +13,14 @@ if [ "" = "$cmd" ] ; then
   done
   exit 0
 fi
-shift
 
+# Verify command exists
+if [ ! -f "$CMDS/$cmd.sh" ] ; then
+  echo "*** Unknown command: '$cmd'"
+  exit 1
+fi
+
+# Run
+shift
 . $CMDS/common.inc
 . $CMDS/$cmd.sh
