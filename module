@@ -1,0 +1,14 @@
+#!/bin/sh
+
+CMDS=./bin
+cmd=$1
+if [ "" = "$cmd" ] ; then
+  for cmd in `ls $CMDS/*sh` ; do 
+    echo "module" $(basename $cmd .sh)
+  done
+  exit 0
+fi
+shift
+
+. $CMDS/common.inc
+. $CMDS/$cmd.sh
