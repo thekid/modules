@@ -15,7 +15,7 @@ update_module() {
 if [ "$1" = "" ] ; then
   s=0
   e=0
-  for module in `ls -d */*`; do
+  for module in `ls -d */* | grep -v ^bin`; do
     echo "===> Updating $module"
     $(update_module ${module%/*} ${module#*/})
 
