@@ -4,8 +4,8 @@
 arg=${1%*/}
 shift 1 || exit 2
 
-vendor=${1%/*}
-repo=${1#*/}
+vendor=${arg%/*}
+repo=${arg#*/}
 
 if [ -d "$vendor/$repo" ] ; then
   echo "*** Module $vendor/$repo already exists"
